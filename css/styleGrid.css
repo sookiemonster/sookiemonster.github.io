@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  width: auto;
+}
+
+section:nth-of-type(2) {
+  background: #000000;
+  z-index: 0;
+}
+
+.background {
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+  width: 1920px;
+  height: 763px;
+}
+
+.sookie {
+  display: block;
+  padding-top: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  min-width: 50%;
+  width: 64vw;
+  /* top: 50%; */
+  /* left: 17vw; */
+  /* transform: translate(-50%, -50%); */
+}
+
+.mountains {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  filter: drop-shadow(0px 0px 20px rgba(0, 110, 255, 0.2));
+}
+
+.monster {
+  position: absolute;
+  z-index: 2;
+  width: 61vw;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
