@@ -4,16 +4,20 @@
     <title> Sookiemonster </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <section>
       <img class="background" src="images/background.png">
-      <img class="sookie" src="images/sookie.png">
-      <img class="mountains" src="images/mountains.svg">
-      <svg class="mountains_under">
-        <rect width="100vw" height="30vh"/>
-      </svg>
+      <img id="sookie" class= "sookie rellax" src="images/sookie.png" data-rellax-speed="-4">
+      <img id="mountains" class="mountains" src="images/mountains.svg">
       <img class="monster" src="images/monster.png">
-    </div>
+    </section>
+    <section>I'm baby meditation fanny pack pour-over coloring book, humblebrag locavore meggings DIY. Schlitz try-hard everyday carry, normcore squid hella ugh iceland XOXO kombucha. Af bicycle rights aesthetic twee iPhone. Readymade tote bag blue bottle, kale chips man braid chia retro drinking vinegar unicorn waistcoat ugh food truck keffiyeh post-ironic. Mlkshk marfa polaroid dreamcatcher four loko portland offal tilde man braid cray bushwick ramps 90's hashtag. Direct trade migas quinoa palo santo salvia microdosing bushwick brooklyn. Fashion axe pug celiac artisan keytar street art cornhole waistcoat seitan echo park kombucha.
+    </section>
+    <script>
+      var rellax = new Rellax('.rellax');
+    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

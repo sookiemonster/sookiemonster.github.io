@@ -1,57 +1,55 @@
 body {
-  margin:0;
+  margin: 0;
   background-color: #000000;
+  color: #FFFFFF;
+  overflow-x: hidden;
 }
 
-.container {
-  position: relative;
-  text-align: center;
+section {
+  height: 100vh;
+  width: auto;
+}
+
+section:nth-of-type(2) {
+  background: #000000;
+  z-index: 0;
 }
 
 .background {
   position: absolute;
-  top: 0px;
   left: 0px;
-  height: 71vh;
-  min-height: 500px;
-  width: 100vw;
-  overflow: hidden;
   z-index: -1;
+  width: 1920px;
+  height: 763px;
 }
 
 .sookie {
-  width: 64vw;
-  position: absolute;
-  top: 32vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  padding-top: 20vh;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 0;
+  min-width: 50%;
+  width: 64vw;
+  /* top: 50%; */
+  /* left: 17vw; */
+  /* transform: translate(-50%, -50%); */
 }
 
 .mountains {
   position: absolute;
-  left: 0px;
-  top: 40vh;
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
   z-index: 1;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  filter: drop-shadow(0px 0px 20px rgba(0, 110, 255, 0.2));
 }
 
 .monster {
-  width: 61vw;
   position: absolute;
-  top: 55vh;
+  z-index: 2;
+  width: 61vw;
+  top: 60vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.mountains_under {
-  margin-top: 50vh;
-  width: 100vw;
-  height: 30vh;
-  fill: rgb(0,0,0);
-  stroke-width: 0;
-  z-index: 1;
 }
