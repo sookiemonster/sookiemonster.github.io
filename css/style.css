@@ -7,6 +7,7 @@
 
 body {
   background-color: var(--primary);
+  color: var(--tertiary);
   font-family: 'Lato', arial;
   margin: 0;
 }
@@ -43,14 +44,16 @@ body {
 }
 
 .wave-container {
+  position: absolute;
   width: 700px;
   height: 45%;
-  position: absolute;
   top: 55%;
   left: 50%;
+  padding-top: 10px;
   transform: translate(-50%, 0%);
   overflow: hidden;
   border-radius: 5px 5px 50% 50%;
+  box-sizing: border-box;
 }
 
 #wave {
@@ -59,9 +62,19 @@ body {
   animation: wave linear 3s infinite;
 }
 
+#waveline {
+  position: absolute;
+  top: -4pt;
+  width: 200%;
+  fill: rgba(0,0,0,0);
+  stroke: var(--secondary);
+  stroke-width: 3pt;
+  animation: wave linear 3s infinite;
+}
+
 .reflect-container-1 {
-  width: 400px;
-  height: 35%;
+  width: 500px;
+  height: 25%;
   position: absolute;
   top: 64%;
   left: 50%;
@@ -70,20 +83,13 @@ body {
 }
 
 #reflect-1 {
-  width: 200%;
-  fill: rgba(var(--tertiary_rgb), .4);
+  width: 215%;
+  fill: rgba(255, 0, 0, 0.0);
+  stroke: rgba(var(--tertiary_rgb), .4);
+  stroke-width: 6pt;
+  stroke-linecap: round;
   animation: wave linear 3s infinite;
   z-index: 1;
-}
-
-.clip-container-1 {
-  width: 400px;
-  height: 35.3%;
-  position: absolute;
-  top: 64.7%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
 }
 
 .reflect-container-2 {
@@ -104,30 +110,6 @@ body {
   z-index: 1;
 }
 
-.clip-container-2 {
-  width: 300px;
-  height: 26.5%;
-  position: absolute;
-  top: 73.5%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
-}
-
-#wave-clip-1 {
-  width: 200%;
-  fill: var(--primary);
-  animation: wave linear 3s infinite;
-  z-index: 2;
-}
-
-#wave-clip-2 {
-  width: 200%;
-  fill: var(--primary);
-  animation: wave linear 3.5s infinite;
-  z-index: 2;
-}
-
 @keyframes wave {
   0% {
     transform: translateX(0);
@@ -136,4 +118,25 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+.navbar {
+  display: flex;
+  background-color: rgba(0,0,0,0);
+}
+
+.nav-item {
+  padding: 20pt 10pt 4pt 10pt;
+  transition: 0.3s;
+  letter-spacing: 1pt;
+}
+
+.nav-item:hover {
+  letter-spacing: 2pt;
+}
+
+#title {
+  padding-left: 25pt;
+  font-size: 20pt;
+  font-weight: 700;
 }
