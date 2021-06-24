@@ -56,6 +56,8 @@ body {
   box-sizing: border-box;
 }
 
+
+
 #wave {
   width: 200%;
   fill: var(--primary);
@@ -74,7 +76,6 @@ body {
 
 .reflect-container-1 {
   width: 500px;
-  height: 25%;
   position: absolute;
   top: 64%;
   left: 50%;
@@ -94,19 +95,39 @@ body {
 
 .reflect-container-2 {
   width: 300px;
-  height: 27%;
   position: absolute;
-  top: 73%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, 0%);
   overflow: hidden;
-
 }
 
 #reflect-2 {
-  width: 200%;
-  fill: rgba(var(--tertiary_rgb), .2);
-  animation: wave linear 3.5s infinite;
+  width: 230%;
+  fill: rgba(255, 0, 0, 0.0);
+  stroke: rgba(var(--tertiary_rgb), .15);
+  stroke-width: 6pt;
+  stroke-linecap: round;
+  animation: wave linear 3s infinite;
+  z-index: 1;
+}
+
+.reflect-container-3 {
+  width: 150px;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: hidden;
+}
+
+#reflect-3 {
+  width: 245%;
+  fill: rgba(255, 0, 0, 0.0);
+  stroke: rgba(var(--tertiary_rgb), .08);
+  stroke-width: 6pt;
+  stroke-linecap: round;
+  animation: wave linear 3s infinite;
   z-index: 1;
 }
 
@@ -129,6 +150,8 @@ body {
   padding: 20pt 10pt 4pt 10pt;
   transition: 0.3s;
   letter-spacing: 1pt;
+  text-decoration: none;
+  color: var(--tertiary);
 }
 
 .nav-item:hover {
