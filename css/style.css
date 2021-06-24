@@ -1,8 +1,11 @@
 :root {
-  --primary: #11151c;
+  --primary: #0f121a;
   --secondary: #364156;
   --tertiary: #ffffff;
   --tertiary_rgb: 255, 255, 255;
+  --r1: 214, 241, 255;
+  --r2: 159, 202, 224;
+  --r3:112, 160, 186;
 }
 
 body {
@@ -28,7 +31,6 @@ body {
   -webkit-box-shadow: 0 0 50px rgba(var(--tertiary_rgb), 0.3);
   -moz-box-shadow: 0 0 50px rgba(var(--tertiary_rgb), 0.3);
   animation: moon ease-in-out 6s infinite;
-
 }
 
 @keyframes moon {
@@ -86,9 +88,8 @@ body {
 #reflect-1 {
   width: 215%;
   fill: rgba(255, 0, 0, 0.0);
-  stroke: rgba(var(--tertiary_rgb), .4);
+  stroke: rgba(var(--r1), .9);
   stroke-width: 6pt;
-  stroke-linecap: round;
   animation: wave linear 3s infinite;
   z-index: 1;
 }
@@ -100,9 +101,8 @@ body {
 #reflect-2 {
   width: 230%;
   fill: rgba(255, 0, 0, 0.0);
-  stroke: rgba(var(--tertiary_rgb), .15);
+  stroke: rgba(var(--r2), .6);
   stroke-width: 6pt;
-  stroke-linecap: round;
   animation: wave linear 3s infinite;
   z-index: 1;
 }
@@ -114,9 +114,8 @@ body {
 #reflect-3 {
   width: 245%;
   fill: rgba(255, 0, 0, 0.0);
-  stroke: rgba(var(--tertiary_rgb), .08);
+  stroke: rgba(var(--r3), .3);
   stroke-width: 6pt;
-  stroke-linecap: round;
   animation: wave linear 3s infinite;
   z-index: 1;
 }
@@ -142,6 +141,7 @@ body {
   letter-spacing: 1pt;
   text-decoration: none;
   color: var(--tertiary);
+  z-index: 2;
 }
 
 .nav-item:hover {

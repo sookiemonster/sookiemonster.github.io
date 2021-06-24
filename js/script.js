@@ -1,5 +1,12 @@
-function moveReflections() {
-  var waveRect = document.getElementById("silhouette").getBoundingClientRect();
-  var reflect = document.getElementsByClassName("reflect-clip-1")[0];
-  reflect.style.marginTop = (waveRect.top) + 20 + "px";
-}
+$(document).ready(function() {
+  function moveReflections() {
+    $(".reflect-clip-1").css("margin-top",
+      $("#silhouette").offset().top + 20 + "px");
+  }
+
+  moveReflections();
+
+  $(window).resize(function() {
+    moveReflections();
+  });
+});
