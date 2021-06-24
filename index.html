@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
   </head>
-  <body>
+  <body onload="moveReflections()" onresize="moveReflections()">
     <section class="navbar">
       <a class="nav-item" id="title" href="">sookiemonster</a>
     </section>
@@ -17,7 +17,7 @@
       <div class="center">
         <div id="circle" class=""></div>
       </div>
-      <div class="wave-silhouette-container">
+      <div class="wave-silhouette-container" id="silhouette">
         <svg id="wave" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 519.5" style="enable-background:new 0 0 1000 519.5;" xml:space="preserve">
           <defs>
           </defs>
@@ -51,9 +51,6 @@
       </div>
       </div>
     </section>
-    <script>
-      var rellax = new Rellax('.rellax');
-    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
