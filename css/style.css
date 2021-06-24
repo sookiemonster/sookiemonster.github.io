@@ -45,18 +45,32 @@ body {
 
 .wave-container {
   position: absolute;
-  width: 700px;
-  height: 45%;
-  top: 55%;
-  left: 50%;
-  padding-top: 10px;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
-  border-radius: 5px 5px 50% 50%;
-  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  top: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
+.wave-container > :first-child {
+  margin-top: 53%;
+}
 
+.wave-container > div {
+  overflow: hidden;
+}
+
+.wave-silhouette-container {
+  position: absolute;
+  width: 700px;
+  height: 350px;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
 
 #wave {
   width: 200%;
@@ -64,23 +78,12 @@ body {
   animation: wave linear 3s infinite;
 }
 
-#waveline {
-  position: absolute;
-  top: -4pt;
-  width: 200%;
-  fill: rgba(0,0,0,0);
-  stroke: var(--secondary);
-  stroke-width: 3pt;
-  animation: wave linear 3s infinite;
+.reflect-container {
+
 }
 
-.reflect-container-1 {
+.reflect-clip-1 {
   width: 500px;
-  position: absolute;
-  top: 64%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
 }
 
 #reflect-1 {
@@ -93,13 +96,8 @@ body {
   z-index: 1;
 }
 
-.reflect-container-2 {
+.reflect-clip-2 {
   width: 300px;
-  position: absolute;
-  top: 72%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
 }
 
 #reflect-2 {
@@ -112,13 +110,8 @@ body {
   z-index: 1;
 }
 
-.reflect-container-3 {
+.reflect-clip-3 {
   width: 150px;
-  position: absolute;
-  top: 78%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  overflow: hidden;
 }
 
 #reflect-3 {
