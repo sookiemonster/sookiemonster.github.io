@@ -6,6 +6,8 @@
   --r1: 214, 241, 255;
   --r2: 159, 202, 224;
   --r3:112, 160, 186;
+
+  --bg: #2d3747;
 }
 
 body {
@@ -15,21 +17,23 @@ body {
   margin: 0;
 }
 
-.center {
+.moon-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
-#circle {
-  border-radius: 50%;
+#moon {
   width: 500px;
-  height: 500px;
-  background-color: var(--tertiary);
-  box-shadow: 0 0 50px rgba(var(--tertiary_rgb), 0.3);
-  -webkit-box-shadow: 0 0 50px rgba(var(--tertiary_rgb), 0.3);
-  -moz-box-shadow: 0 0 50px rgba(var(--tertiary_rgb), 0.3);
+  max-width: 60vw;
+  max-height: 60vh;
+  fill: var(--tertiary);
+  filter: drop-shadow(0 0 20px rgba(var(--tertiary_rgb), 0.3));
   animation: moon ease-in-out 6s infinite;
 }
 
@@ -47,7 +51,7 @@ body {
 
 .wave-container {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: auto;
   top: 0;
   margin-top: 30px;
@@ -57,7 +61,7 @@ body {
 }
 
 .wave-container > :first-child {
-  margin-top: 53%;
+  margin-top: 53vh;
 }
 
 .wave-container > div {
@@ -67,8 +71,9 @@ body {
 .wave-silhouette-container {
   position: absolute;
   width: 700px;
+  max-width: 70vw;
   height: 350px;
-  top: 51%;
+  top: 51vh;
   left: 50%;
   transform: translate(-50%, 0);
   overflow: hidden;
@@ -83,6 +88,7 @@ body {
 
 .reflect-clip-1 {
   width: 500px;
+  max-width: 45vw;
 }
 
 #reflect-1 {
@@ -96,6 +102,7 @@ body {
 
 .reflect-clip-2 {
   width: 300px;
+  max-width: 33vw;
 }
 
 #reflect-2 {
@@ -109,6 +116,7 @@ body {
 
 .reflect-clip-3 {
   width: 150px;
+  max-width: 20vw;
 }
 
 #reflect-3 {
