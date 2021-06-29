@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+#landing-page {
+  overflow: hidden;
+}
+
 .moon-container {
   position: absolute;
   width: 100vw;
@@ -26,15 +30,18 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  filter: drop-shadow(0 0 20px rgba(var(--tertiary_rgb), 0.3));
 }
 
 #moon {
-  width: 500px;
-  max-width: 60vw;
-  max-height: 60vh;
-  fill: var(--tertiary);
-  filter: drop-shadow(0 0 20px rgba(var(--tertiary_rgb), 0.3));
-  animation: moon ease-in-out 6s infinite;
+  display: block;
+  clip-path: circle(min(250px, 30vw));
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--tertiary);
+  transition: 0s;
+  /* animation: moon ease-in-out 6s infinite; */
 }
 
 @keyframes moon {
@@ -71,11 +78,12 @@ body {
 .wave-silhouette-container {
   position: absolute;
   width: 700px;
-  max-width: 70vw;
-  height: 350px;
+  max-width: 80vw;
+  height: 49vh;
   top: 51vh;
   left: 50%;
   transform: translate(-50%, 0);
+  transition: top .2s ease-out;
   overflow: hidden;
 }
 
@@ -160,4 +168,93 @@ body {
   padding-left: 25pt;
   font-size: 20pt;
   font-weight: 700;
+}
+
+#nav-button {
+  position: fixed;
+  top: 20px;
+  width: 50px;
+  right: 5%;
+  z-index: 3;
+}
+
+#nav-circle {
+  transition: fill .2s ease-out;
+}
+
+.inactive-button {
+  fill: var(--primary);
+}
+
+#nav-button:hover > .inactive-button {
+  fill: var(--tertiary);
+}
+
+.active-button {
+  fill: var(--tertiary);
+}
+
+#nav-button:hover > .active-button {
+  fill: var(--primary);
+}
+
+.button-bar {
+  position: absolute;
+  width: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .2s ease-out;
+}
+
+.inactive-bar {
+  fill: var(--tertiary);
+}
+
+.active-bar {
+  fill: var(--primary);
+}
+
+#nav-button:hover > .inactive-bar {
+  fill: var(--primary);
+}
+
+#nav-button:hover > .active-bar {
+  fill: var(--tertiary);
+}
+
+#top-bar {
+  top: 35%;
+}
+
+#bottom-bar {
+  bottom: 35%;
+}
+
+#nav-page {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.nav-link {
+  font-size: calc(30pt + 2vw);
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 2vh;
+  transition: letter-spacing .2s cubic-bezier(.68,2.5,.72,1.01), color .2s ease-out;
+}
+
+.nav-link:hover {
+  letter-spacing: 3pt;
+  color: var(--secondary);
 }

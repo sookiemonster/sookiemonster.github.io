@@ -7,18 +7,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/script.js"></script>
   </head>
-  <body>
+  <body id="landing-page">
     <section class="navbar">
       <a class="nav-item" id="title" href="index.html">sookiemonster</a>
     </section>
 
+    <div id="nav-button">
+      <svg id="nav-circle" class="inactive-button" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="5" cy="5" r="5"/>
+      </svg>
+      <svg id="top-bar" class="button-bar inactive-bar" viewBox="0 0 7 1" xmlns="http://www.w3.org/2000/svg">
+        <rect width="7" height="1" rx=".5">
+      </svg>
+      <svg id="bottom-bar" class="button-bar inactive-bar" viewBox="0 0 7 1" xmlns="http://www.w3.org/2000/svg">
+        <rect width="7" height="1" rx=".5">
+      </svg>
+    </div>
+
     <section>
       <div class="moon-container">
-        <svg id="moon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="5" cy="5" r="5"/>
-        </svg>
+        <div id="moon"></div>
       </div>
 
       <div class="wave-silhouette-container" id="silhouette">
@@ -35,27 +47,32 @@
 
       <div class="wave-container">
         <div class="reflect-clip-1">
-          <svg id="reflect-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5 -5 1000 53" style="enable-background:new 0 0 1000 43;" xml:space="preserve">
+          <svg id="reflect-1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -5 1000 53" style="enable-background:new 0 0 1000 43;" xml:space="preserve">
             <defs>
             </defs>
             <path class="st0" d="M0,0.89c125,0,125.08,41.62,250.08,41.62c125,0,124.92-42,249.92-42c125,0,125,42,250,42S875,0.89,1000,0.89"/>
           </svg>
         </div>
         <div class="reflect-clip-2">
-          <svg id="reflect-2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5 -5 1000 53" style="enable-background:new 0 0 1000 43;" xml:space="preserve">
+          <svg id="reflect-2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -5 1000 53" style="enable-background:new 0 0 1000 43;" xml:space="preserve">
             <defs>
             </defs>
             <path class="st0" d="M0,0.89c125,0,125.08,41.62,250.08,41.62c125,0,124.92-42,249.92-42c125,0,125,42,250,42S875,0.89,1000,0.89"/>
           </svg>
         </div>
         <div class="reflect-clip-3">
-        <svg id="reflect-3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5 -5 1000 53" style="enable-background:new 0 0 1000 43;" xml:space="preserve">
+        <svg id="reflect-3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -5 1000 53" style="enable-background:new 0 0 1000 43;" xml:space="preserve">
           <defs>
           </defs>
           <path class="st0" d="M0,0.89c125,0,125.08,41.62,250.08,41.62c125,0,124.92-42,249.92-42c125,0,125,42,250,42S875,0.89,1000,0.89"/>
         </svg>
       </div>
       </div>
+    </section>
+
+    <section id="nav-page">
+      <a class="nav-link" href="">About Me</a>
+      <a class="nav-link" href="">My Projects</a>
     </section>
   </body>
 </html>
