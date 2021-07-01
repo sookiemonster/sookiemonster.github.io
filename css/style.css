@@ -78,12 +78,10 @@ body {
 .wave-silhouette-container {
   position: absolute;
   width: 100vw;
-  max-width: 100vw;
   height: 49vh;
   top: 51vh;
   left: 50%;
   transform: translate(-50%, 0);
-  transition: top .2s ease-out;
   overflow: hidden;
 }
 
@@ -93,6 +91,12 @@ body {
   animation: wave linear 6s infinite;
 }
 
+#filler {
+  height: auto;
+  margin-top: -10px;
+  width: 100vw;
+  fill: var(--primary);
+}
 
 .reflect-clip-1 {
   width: 500px;
@@ -194,8 +198,6 @@ body {
   fill: var(--tertiary);
 }
 
-
-
 #nav-button:hover > .active-button {
   fill: var(--primary);
 }
@@ -247,7 +249,7 @@ body {
 }
 
 .nav-link {
-  font-size: calc(30pt + 2vw);
+  font-size: calc(20pt + 3vw);
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;

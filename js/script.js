@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     $("#silhouette").css({
       "top" : "80vh",
-      "transition" : "top .2s",
+      "transition" : "top .2s ease-out",
     });
 
     $("#moon").css({
