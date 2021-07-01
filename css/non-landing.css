@@ -1,0 +1,104 @@
+
+body {
+  background-color: var(--bg);
+}
+
+#nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--tertiary);
+  width: 100vw;
+  height: 100vh;
+  transition: .2s ease-out;
+  clip-path: circle(0% at calc(95% - 10px) 20px);
+}
+
+.text-container {
+  display: flex;
+  max-width: 100vw;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-left: 5vw;
+}
+
+#description {
+  margin: 0 5vw 5vh 0;
+}
+
+h1 {
+  font-size: calc(50pt + 2vw);
+  text-transform: uppercase;
+  margin-bottom: 5pt;
+}
+
+h2 {
+  font-size: calc(20pt + 1vw);
+  font-weight: 300;
+  color: var(--secondary);
+  margin: 0;
+}
+
+#skills {
+  max-height: 30vh;
+}
+
+.type {
+  font-size: calc(10pt + 1vw);
+  font-weight: 400;
+  text-align: right;
+  padding: .2vh 0 .2vh 0;
+  max-height: 50px;
+}
+
+.bar {
+  background-color: var(--secondary);
+  margin-left: 12px;
+  border-radius: 4px;
+  height: calc(7px + 1vh);
+}
+
+.percent {
+  padding-left: 15px;
+  font-weight: 300;
+  font-size: calc(10pt + 1vh);
+}
+
+#html-bar {
+  width: 30vw;
+}
+
+#css-bar {
+  width: 25vw;
+}
+
+#js-bar {
+  width: 17vw;
+}
+
+#ps-bar {
+  width: 35vw;
+}
+
+#java-bar {
+  width: 30vw;
+}
+
+#py-bar {
+  width: 10vw;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: calc(30pt + 1vw);
+  }
+
+  h2 {
+    font-size: calc(12pt + .8vw);
+  }
+
+  #title {
+    font-size: 20pt;
+    padding-left: 5vw;
+  }
+}

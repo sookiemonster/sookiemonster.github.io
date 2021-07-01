@@ -1,6 +1,6 @@
 :root {
   --primary: #0f121a;
-  --secondary: #364156;
+  --secondary: #88b5ff;
   --tertiary: #ffffff;
   --tertiary_rgb: 255, 255, 255;
   --r1: 214, 241, 255;
@@ -11,7 +11,6 @@
 }
 
 body {
-  background-color: var(--bg);
   color: var(--tertiary);
   font-family: 'Lato', arial;
   margin: 0;
@@ -19,6 +18,7 @@ body {
 
 #landing-page {
   overflow: hidden;
+  background-color: var(--bg);
 }
 
 .moon-container {
