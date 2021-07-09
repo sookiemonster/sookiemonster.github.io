@@ -8,20 +8,18 @@ $(document).ready(function() {
 
     $(".button-bar").addClass("active-bar").removeClass("inactive-bar");
     $("#top-bar").css({
-      "top" : "27%",
-      "left" : "61%",
-      "transform-origin" : "top left",
-      "transform" : "translate(-50%, -50%) rotate(45deg)"
+      "top" : "23px",
+      "left" : "50%",
+      "transform" : "translateX(-50%) rotate(45deg)"
     });
     $("#bottom-bar").css({
-      "bottom" : "27%",
-      "left" : "61%",
-      "transform-origin" : "bottom left",
-      "transform" : "translate(-50%, -50%) rotate(-45deg)"
+      "bottom" : "23px",
+      "left" : "50%",
+      "transform" : "translateX(-50%) rotate(-45deg)"
     });
 
     setTimeout(function() {
-      $("#title").css("color", "var(--primary)").fadeIn();
+      $("#title").css("color", "rgb(var(--secondary))");
       $("#nav-page").css("display", "flex").hide().fadeIn();
     }, 100);
 
@@ -34,20 +32,17 @@ $(document).ready(function() {
     $("#nav-circle").removeClass("active-button").addClass("inactive-button");
     $(".button-bar").removeClass("active-bar").addClass("inactive-bar");
     $("#top-bar").css({
-      "top" : "35%",
+      "top" : "17px",
       "left" : "50%",
-      "transform" : "translate(-50%, -50%) rotate(0deg)"
+      "transform" : "translateX(-50%) rotate(0deg)"
     });
     $("#bottom-bar").css({
-      "bottom" : "35%",
+      "bottom" : "17px",
       "left" : "50%",
-      "transform" : "translate(-50%, -50%) rotate(0deg)"
+      "transform" : "translateX(-50%) rotate(0deg)"
     });
 
-    setTimeout(function() {
-      $("#title").css("color", "var(--tertiary)");
-    }, 100);
-
+    $("#title").css("color", "");
     $("#nav-page").fadeOut(200);
 
     menu_toggled = false;

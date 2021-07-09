@@ -1,0 +1,47 @@
+:root {
+  --title: 225, 225, 225;
+  --active: #009cbf;
+}
+
+#about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("../images/aboutme.png");
+  z-index: -1;
+}
+
+#title {
+  color: rgb(var(--title));
+}
+
+.text-container {
+  z-index: 1;
+}
+
+#overview {
+  position: absolute;
+  top: calc(70px + 20vw);
+  left: 4vw;
+  filter: drop-shadow(0 0 5px rgba(09, 0, 0, 0.3));
+}
+
+h1 {
+  color: white;
+  font-size: calc(30pt + 2.5vw);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: white;
+  font-size: calc(10pt + 1vw);
+  line-height: calc(15pt + 1vw);
+  font-weight: 300;
+}

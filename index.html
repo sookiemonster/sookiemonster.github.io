@@ -7,15 +7,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="js/landing.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body id="landing-page">
-    <section class="navbar">
-      <a class="nav-item" id="title" href="index.html">sookiemonster</a>
+    <a id="title" href="index.html">sookiemonster</a>
+    <div id="nav-bg"></div>
+    <section id="nav-page">
+      <a class="nav-link" href="about.html">About Me</a>
+      <a class="nav-link" href="">My Projects</a>
     </section>
-
     <div id="nav-button">
       <svg id="nav-circle" class="inactive-button" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
         <circle cx="5" cy="5" r="5"/>
@@ -27,29 +27,16 @@
         <rect width="7" height="1" rx=".5">
       </svg>
     </div>
-    <section id="nav-page">
-      <a class="nav-link" href="about.html">About Me</a>
-      <a class="nav-link" href="">My Projects</a>
-    </section>
 
-    <section>
-      <div class="moon-container">
-        <div id="moon"></div>
-      </div>
-
-      <div class="wave-silhouette-container" id="silhouette">
-        <svg id="wave" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 559.5" xml:space="preserve">
-          <defs>
-          </defs>
-          <g>
-            <path class="st0" d="M1750.08,39c-125,0.51-125.17-39.51-250.17-39c-125,0.51-124.83,38.49-249.83,39
-              C1125.11,39.51,1124.91-0.48,1000,0C875,0.51,875.08,38.5,750.08,39S624.91-0.5,499.91,0c-125,0.51-124.83,38.49-249.83,39
-              C125.11,39.51,124.91-0.48,0,0v559.5h1000h960h40V0c-14.99,0.06-28.18,0.7-40,1.79C1873.22,9.76,1860.1,38.56,1750.08,39z"/>
-          </g>
-        </svg>
-        <svg id="filler" viewBox="0 0 1 1">
-          <rect width="1" height="1">
-        </svg>
+    <section class="noselect">
+      <img id="head-in-clouds" src="images/headinclouds.png">
+      <div id="landing-text">
+        <h1 id="landing-title">Hi</h1>
+        <div id="secondary-landing">
+          <h2 id="landing-caption" >
+            <span class="recolor-text">I'm</span> Daniel
+          </h2>
+        </div>
       </div>
     </section>
   </body>
