@@ -70,11 +70,12 @@ table {
 
 #description > div {
   margin-bottom: 2vh;
+  box-sizing: border-box;
+  padding-right: 50px;
 }
 
 #description:last-child {
   padding-right: calc(30vw - 200px);
-  box-sizing: border-box;
 }
 
 .exp {
