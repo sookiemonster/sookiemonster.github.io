@@ -1,17 +1,45 @@
 :root {
-  --title: 225, 225, 225;
+  --title: 255, 255, 255;
   --active: #009cbf;
 }
 
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: white;
+  font-size: calc(30pt + 2.5vw);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: white;
+  font-size: calc(10pt + 1vw);
+  line-height: calc(15pt + 1vw);
+  font-weight: 300;
+}
+
+h3 {
+  color: rgb(var(--secondary));
+  font-size: calc(25pt + 1vw);
+  margin: 0 0 .2em 0;
+  padding: 0;
+}
+
+table {
+  margin: 0;
+  color: rgba(var(--secondary), 0.8);
+  text-align: left;
+}
+
 #about-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-image: url("../images/aboutme.png");
+  height: auto;
   z-index: -1;
 }
 
@@ -30,18 +58,56 @@
   filter: drop-shadow(0 0 5px rgba(09, 0, 0, 0.3));
 }
 
-h1 {
-  color: white;
-  font-size: calc(30pt + 2.5vw);
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
+#description {
+  position: relative;
+  left: 4vw;
+  top: calc(10px + 1vh);
+  width: 92vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-h2 {
-  color: white;
-  font-size: calc(10pt + 1vw);
-  line-height: calc(15pt + 1vw);
+#description > div {
+  margin-bottom: 2vh;
+}
+
+#description:last-child {
+  padding-right: calc(30vw - 200px);
+  box-sizing: border-box;
+}
+
+.exp {
+  font-size: calc(13pt + .5vh);
   font-weight: 300;
+}
+
+.type {
+  font-size: calc(13pt + .5vh);
+  font-weight: 500;
+  text-align: right;
+}
+
+.bar {
+  display: inline-block;
+  height: calc(10px + .5vh);
+  border-radius: 2px;
+  background-color: var(--active);
+  margin: 0 calc(5px + 1vw);
+}
+
+.halfyear {
+  width: calc(10px + 2.5vw);
+}
+
+.oneyear {
+  width: calc(20px + 5vw);
+}
+
+.twoyear {
+  width: calc(40px + 10vw);
+}
+
+.fouryear {
+  width: calc(80px + 20vw);
 }
