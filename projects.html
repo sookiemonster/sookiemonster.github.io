@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Sookiemonster </title>
+    <title> About Me </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </head>
-  <body id="landing-page">
+  <body>
     <a id="title" href="index.html">sookiemonster</a>
     <div id="nav-bg"></div>
     <section id="nav-page">
@@ -27,15 +28,19 @@
         <rect width="7" height="1" rx=".5">
       </svg>
     </div>
-
-    <section class="noselect">
-      <img id="head-in-clouds" src="images/headinclouds.png">
-      <div id="landing-text">
-        <h1 id="landing-title">Hi</h1>
-        <div id="secondary-landing">
-          <h2 id="landing-caption" >
-            <span class="recolor-text">I'm</span> Daniel
-          </h2>
+    <section id="main-container">
+      <h1>My Projects</h1>
+      <h2>Here’s some of the things I’ve worked on:</h2>
+      <div class="project-item">
+        <div class="card">
+          <div class="lr-bar" id="bw-gradient"></div>
+          <div class="lr-bar" id="temp-gradient"></div>
+          <div class="lr-bar" id="tint-gradient"></div>
+          <div class="lr-bar" id="sat-gradient"></div>
+        </div>
+        <div class="project-description">
+          <a href="https://github.com/sookiemonster/APCSFinalProject" class="project-link"><h3>LiteRoom</h3></a>
+          <p>An imitation of Adobe’s Lightroom in Java / Processing</p>
         </div>
       </div>
     </section>

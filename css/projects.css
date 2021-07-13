@@ -1,0 +1,99 @@
+#main-container {
+  position: absolute;
+  width: 80vw;
+  height: auto;
+  top: 90px;
+  left: 5vw;
+}
+
+h1 {
+  color: var(--secondary);
+  font-size: calc(35pt + 1.5vw);
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: calc(20pt + .5vw);
+  font-weight: 300;
+  margin: 0;
+}
+
+h3 {
+  color: var(--secondary);
+  font-size: calc(20pt + 1.5vw);
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  color: var(--secondary);
+  font-size: calc(10pt + 1vw);
+  font-weight: 300;
+  margin: 0;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  margin-right: 40px;
+  padding: 15px 30px;
+  width: 205px;
+  height: 150px;
+  border-radius: 18px;
+  background-color: rgb(var(--secondary));
+}
+
+.project-description {
+  height: 80%;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  transition: .2s;
+}
+
+.project-link:hover {
+  color: var(--active);
+  letter-spacing: 3px;
+}
+
+.lr-bar {
+  height: 10px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+#bw-gradient {
+  background-image: -moz-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,255,255) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,255,255) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,255,255) 100%);
+}
+
+#temp-gradient {
+  background-image: -moz-linear-gradient( 0deg, rgb(14,0,255) 0%, rgb(253,250,3) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(14,0,255) 0%, rgb(253,250,3) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(14,0,255) 0%, rgb(253,250,3) 100%);
+}
+
+#tint-gradient {
+  background-image: -moz-linear-gradient( 0deg, rgb(255,0,255) 0%, rgb(0,255,0) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(255,0,255) 0%, rgb(0,255,0) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(255,0,255) 0%, rgb(0,255,0) 100%);
+}
+
+#sat-gradient {
+  background-image: -moz-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
+}
