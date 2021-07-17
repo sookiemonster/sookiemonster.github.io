@@ -70,6 +70,7 @@ p {
 
 .lr-bar {
   height: 10px;
+  min-width: 50px;
   width: 100%;
   border-radius: 2px;
 }
@@ -96,4 +97,18 @@ p {
   background-image: -moz-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
   background-image: -webkit-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
   background-image: -ms-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
+}
+
+@media only screen and (max-width: 800px) {
+  /* .lr-bar {
+    width: 40px
+  } */
+
+  h2 {
+    font-size: 20pt;
+  }
+
+  .card {
+    margin-right: 20px;
+  }
 }

@@ -111,3 +111,43 @@ table {
 .fouryear {
   width: calc(80px + 20vw);
 }
+
+@media only screen and (max-width: 800px) {
+  #about-image {
+    overflow: hidden;
+    min-width: 800px;
+    float: right;
+  }
+
+  #overview {
+    text-align: right;
+    top: 250px;
+    right: 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  #description {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  #description > div {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bar {
+    display: none;
+  }
+
+  .exp {
+    margin-left: 10px;
+  }
+}

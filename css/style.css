@@ -50,7 +50,9 @@ body {
 
 .recolor-text {
   color: #75abb0;
+  font-weight: 400;
 }
+
 
 #landing-title {
   position: relative;
@@ -64,11 +66,35 @@ body {
 }
 
 #landing-caption {
-  font-weight: 500;
+  font-weight: 700;
   font-size: calc(75pt + 2vh);
   color: rgb(var(--tertiary));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, .1));
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #landing-text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+  }
+
+  #landing-title {
+    left: 0;
+    font-size: 250px;
+    line-height: 250px;
+  }
+
+  #landing-caption {
+    text-align: center;
+    font-size: 80px;
+  }
 }
 
 /* Navigation */
@@ -191,4 +217,10 @@ body {
 .nav-link:hover {
   letter-spacing: 3pt;
   color: var(--active);
+}
+
+@media only screen and (max-width: 800px) {
+  #nav-button {
+    right: 40px;
+  }
 }
