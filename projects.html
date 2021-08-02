@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
     <script src="js/script.js"></script>
   </head>
   <body>
@@ -41,6 +42,65 @@
         <div class="project-description">
           <a href="https://github.com/sookiemonster/APCSFinalProject" class="project-link"><h3>LiteRoom</h3></a>
           <p>An imitation of Adobe’s Lightroom in Java / Processing</p>
+        </div>
+      </div>
+      <div class="project-item">
+        <div class="card" id="spotify-unpacker">
+          <canvas id="spotifyGraph"></canvas>
+          <script>
+            var ctx = document.getElementById('spotifyGraph').getContext('2d');
+            var overviewChart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'],
+                datasets: [{
+                  data: [
+                    2.7, 
+                    3, 
+                    3.5, 
+                    4,
+                    5,
+                    3.5,
+                    2
+                  ],
+                  backgroundColor: [
+                    'rgba(43, 217, 90, 0.3)'
+                  ],
+                  borderColor: [
+                    'rgba(43, 217, 90, 1)'
+                  ],
+                  borderWidth: 2,
+                  tension: 0.3,
+                  fill: {
+                    target: 'origin',
+                  }
+                }]
+              },
+              options: {
+                plugins: {
+                  legend: {
+                    display: false
+                  },
+                  tooltip: {
+                    enabled: false,
+                  }
+                },
+                scales: {
+                  y: {
+                    display: false,
+                    beginAtZero: true,
+                  },
+                  x: {
+                    display: false,
+                  }
+                }
+              }
+            });
+          </script>
+        </div>
+        <div class="project-description">
+          <a id="sp-link" href="https://github.com/sookiemonster/Data-Unpacker-for-Spotify" class="project-link"><h3>Data Unpacker <br>for Spotify</h3></a>
+          <p>A web application to unpack & visualize Spotify user data packages</p>
         </div>
       </div>
     </section>

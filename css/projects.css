@@ -47,8 +47,10 @@ p {
   justify-content: space-evenly;
   margin-right: 40px;
   padding: 15px 30px;
-  width: 205px;
-  height: 150px;
+  width: 220px;
+  min-width: 220px;
+  height: 180px;
+  box-sizing: border-box;
   border-radius: 18px;
   background-color: rgb(var(--secondary));
 }
@@ -71,7 +73,7 @@ p {
 .lr-bar {
   height: 10px;
   min-width: 50px;
-  width: 100%;
+  width: auto;
   border-radius: 2px;
 }
 
@@ -99,10 +101,20 @@ p {
   background-image: -ms-linear-gradient( 0deg, rgb(0,0,0) 0%, rgb(255,0,0) 100%);
 }
 
+#spotify-unpacker {
+  background-color: rgb(20, 20, 20);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 100%);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#393939",GradientType=1);
+}
+
+#sp-link:hover {
+  color: rgb(67, 186, 98);
+  letter-spacing: 1.5px;
+}
+
 @media only screen and (max-width: 800px) {
-  /* .lr-bar {
-    width: 40px
-  } */
 
   h2 {
     font-size: 20pt;
