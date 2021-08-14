@@ -100,7 +100,7 @@ body {
 /* Navigation */
 
 #title {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 25px;
   color: rgb(var(--secondary));
@@ -179,7 +179,7 @@ body {
 }
 
 #nav-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: var(--bg);
@@ -193,7 +193,7 @@ body {
 #nav-page {
   display: none;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -22,7 +22,6 @@ $(document).ready(function() {
 
     setTimeout(function() {
       $(document.body).css("background-color", "var(--bg)");
-      // $("#title").css("color", "var(--primary)");
       $("#nav-page").css("display", "flex").hide().fadeIn();
     }, 100);
 
