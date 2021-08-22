@@ -28,74 +28,58 @@
         <rect width="7" height="1" rx=".5">
       </svg>
     </div>
-    <section>
-      <img id="about-image" src="images/aboutme.png">
-      <div id="overview">
+    <div class="header">
+      <picture id="about-image">
+        <source media="(min-width: 601px)"
+          srcset="images/aboutme_medium.png 960w,
+                  images/aboutme_large.png 1920w">
+        <source media="(max-width: 600px)"
+          srcset="images/aboutme_vertical_small.png 653w,
+                  images/aboutme_vertical_medium.png 1305w">
+        <img alt="About Me" src="images/aboutme_medium.png">
+      </picture>
+
+      <div class="overview">
         <h1>Daniel<br>Sooknanan</h1>
         <h2>I’m a student at Stuyvesant High School <br>
           with a passion for computer science & post-processing.
         </h2>
       </div>
-    </section>
-    <section id="description">
-      <div>
+    </div>
+    <div class="flex-wrapper">
+      <div id="compsci" class="skill">
         <h3>Computer Science</h3>
-        <table>
-          <tr>
-            <th class="type">HTML</th>
-            <th>
-              <div class="bar twoyear"></div><span class="exp">2 years</span>
-            </th>
-          </tr>
-          <tr>
-            <th class="type">CSS</th>
-            <th>
-              <div class="bar twoyear"></div><span class="exp">2 years</span>
-            </th>
-          </tr>
-          <tr>
-            <th class="type">JS / JQuery</th>
-            <th>
-              <div class="bar halfyear"></div><span class="exp">< 1 year</span>
-            </th>
-          </tr>
-          <tr>
-            <th class="type">Java</th>
-            <th>
-              <div class="bar oneyear"></div><span class="exp">1 year</span>
-            </th>
-          </tr>
-          <tr>
-            <th class="type">Python</th>
-            <th>
-              <div class="bar oneyear"></div><span class="exp">1 year</span>
-            </th>
-          </tr>
-        </table>
+        <div class="skill-grid-wrapper">
+          <span class="type">HTML</span>
+          <span class="exp">2 years</span>
+
+          <span class="type">CSS</span>
+          <span class="exp">2 years</span>
+
+          <span class="type">JS / JQuery</span>
+          <span class="exp">1 year</span>
+
+          <span class="type">Java</span>
+          <span class="exp">1 year</span>
+
+          <span class="type">Python</span>
+          <span class="exp">1 year</span>
+        </div>
       </div>
-      <div>
+
+      <div id="processing" class="skill">
         <h3>Post-Processing</h3>
-        <table>
-          <tr>
-            <th class="type">Photoshop</th>
-            <th>
-              <div class="bar fouryear"></div><span class="exp">4 years</span>
-            </th>
-          </tr>
-          <tr>
-            <th class="type">Lightroom</th>
-            <th>
-              <div class="bar twoyear"></div><span class="exp">2 years</span>
-            </th>
-          </tr>
-          <tr>
-            <th class="type">DaVinci Resolve</th>
-            <th>
-              <div class="bar oneyear"></div><span class="exp">1 year</span>
-            </th>
-          </tr>
-        </table>
+        <div class="skill-grid-wrapper">
+          <span class="type">Photoshop</span>
+          <span class="exp">4 years</span>
+
+          <span class="type">Lightroom</span>
+          <span class="exp">2 years</span>
+
+          <span class="type">DaVinci Resolve</span>
+          <span class="exp">1 year</span>
+        </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
