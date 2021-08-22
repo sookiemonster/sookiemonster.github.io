@@ -1,8 +1,8 @@
 #main-container {
-  position: absolute;
+  position: relative;
   width: 80vw;
   height: auto;
-  top: 90px;
+  padding-top: 90px;
   left: 5vw;
 }
 
@@ -13,11 +13,19 @@ h1 {
   margin: 0;
 }
 
+#header-title {
+  animation: slide-from-top 0.75s ease forwards;
+}
+
 h2 {
   color: var(--secondary);
   font-size: calc(20pt + .5vw);
   font-weight: 300;
   margin: 0;
+}
+
+#header-description {
+  animation: slide-from-bottom 0.75s ease forwards;
 }
 
 h3 {
@@ -53,6 +61,7 @@ p {
   box-sizing: border-box;
   border-radius: 18px;
   background-color: rgb(var(--secondary));
+  opacity: 0;
 }
 
 .project-description {
@@ -60,9 +69,14 @@ p {
 }
 
 .project-link {
+  display: block;
   text-decoration: none;
   color: inherit;
   transition: .2s;
+}
+
+.project-description > p, .project-description > .project-link{
+  opacity: 0;
 }
 
 .project-link:hover {
