@@ -39,7 +39,25 @@
       </div>
     </div>
     <div id="home">
-
+      <div class="home-content-container">
+        <div class="home-image-container">
+          <picture id="home-image">
+              <source media = "(min-width: 1000px)" 
+                      srcset = "images/home_medium.png 1440w,
+                                images/home_large.png 1920w"
+                      sizes="100vw">
+              <source media = "(max-width: 999px)"
+                      srcset = "images/home_vertical_medium.png 1305w,
+                                images/home_vertical_small.png 653w"
+                      sizes="100vw">
+            <img src="images/home_large.png" alt="Home">
+          </picture>
+        </div>
+        <div class="home-text-container">
+          <span class="greeting">Hi there, I'm</span>
+          <span class="name">Daniel</span>
+        </div>
+      </div>
     </div>
     <div id="about">
 
