@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding: 40px 0;
 }
 
 * {
@@ -26,6 +27,10 @@ body {
     color: var(--black);
 }
 
+section {
+    margin-bottom: 90px;
+}
+
 /* Navigation Bar ---------------------------------------- */
 
 nav {
@@ -37,9 +42,18 @@ nav {
     display: flex;
     align-items: center;
     gap: calc(25px + 1.5%);
-    padding: 45px;
+    padding: 32px 45px 25px;
     color: var(--white);
+
+    background-color: rgba(0,0,0,0);
+    transition: background-color ease .25s, color ease .25s;
     z-index: 2;
+}
+
+.scrolled {
+    background-color: var(--white);
+    color: var(--black);
+    filter: drop-shadow(0 0 5px rgba(0,0,0, .1));
 }
 
 #nav-title {
@@ -48,12 +62,14 @@ nav {
     font-size: 1.4rem;
     letter-spacing: 1px;
     margin-right: auto;
+    transition: inherit;
 }
 
 nav a {
     text-decoration: none;
     cursor: pointer;
     color: inherit;
+    transition: inherit;
 }
 
 /* Social Media Sidebar ---------------------------------------- */
@@ -93,7 +109,6 @@ nav a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
     min-height: 500px;
 }
 
@@ -137,6 +152,89 @@ nav a {
 .name {
     font-size: calc(5rem + 2.5vw);
     font-family: 'Spartan', sans-serif;
-    transform: translate3D(-.5vw, 0, 0); /* Fix indent on large font-size */
+    transform: translate3D(-.6vw, 0, 0); /* Fix indent on large font-size */
     color: var(--white);
+}
+
+/* About ---------------------------------------- */
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.about-image-container {
+    height: 85%;
+    border-radius: 0 50px;
+    justify-self: center;
+    align-self: center;
+    overflow: hidden;
+}
+
+#about-image {
+    display: block;
+    height: 100%;
+}
+
+#about-image img {
+    display: block;
+}
+
+.about-text-container {
+    align-self: center;
+    min-width: 400px;
+    margin-left: calc(10px + 6vw);
+}
+
+/* Header */
+
+.about-header {
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Spartan', sans-serif;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+p {
+    color: var(--dark-gray);
+    line-height: 2rem;
+}
+
+/* Skills */
+
+h2 {
+    display: block;
+    border-bottom: solid var(--dark-gray) 1px;
+
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 0;
+    margin: 15px 0;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 440px;
+    margin: 0 10px 40px;
+    gap: 20px;
+}
+
+.skill-item > span {
+    display: block;
+}
+
+.skill-name {
+    font-weight: 600;
+}
+
+.skill-time {
+    font-weight: 300;
 }
