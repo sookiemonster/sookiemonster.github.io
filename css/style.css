@@ -3,7 +3,12 @@
     --dark-gray: #403e3e;
     --dark-green: #0c2720;
     --light-green: #cedad6;
+    --light-gray: #d8d8d8;
     --white: #ffffff;
+
+    /* Project Hovers */
+    --lite-active: #2c73c5;
+    --unpacker--active: #059400;
     font-size: 16px;
 }
 
@@ -26,7 +31,6 @@ body {
     width: 100%;
     color: var(--black);
 }
-
 
 section:nth-of-type(n + 2) {
     margin-top: 90px;
@@ -76,10 +80,32 @@ nav {
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     cursor: pointer;
     color: inherit;
     transition: inherit;
+}
+
+nav a::after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    width: 0px;
+    height: 2px;
+    transform: translate(-50%, 7px);
+    display: block;
+    background-color: rgba(0,0,0,0);
+    transition: width .15s ease, background-color .15s ease;
+}
+
+nav a:hover::after {
+    width: 3ch;
+    background-color: var(--white);
+}
+
+.scrolled a:hover::after {
+    background-color: var(--dark-gray);
 }
 
 /* Social Media Sidebar ---------------------------------------- */
@@ -106,10 +132,16 @@ nav a {
     padding: 7px;
     background-color: inherit;
     border-radius: 10px;
+    background-color: inherit;
+    transition: background-color .15s ease;
 }
 
 .social-button svg, .social-button img{
     height: 100%;
+}
+
+.social-button:hover {
+    background-color: var(--light-gray);
 }
 
 /* Home ---------------------------------------- */
@@ -264,8 +296,8 @@ h3 {
 .project-list {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    gap: 40px;
+    margin-top: 30px;
+    gap: 10px;
 }
 
 .project-container {
@@ -274,9 +306,17 @@ h3 {
         "icon title"
         "icon description";
     gap: 0px 20px;
-    height: 97px;
     grid-template-columns: 95px 1fr;
-    margin-left: 20px;
+    padding: 25px 20px;
+    border-radius: 10px;
+
+    background-color: var(--white);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: box-shadow .2s ease;
+}
+
+.project-container:hover {
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .project-icon {
@@ -298,6 +338,8 @@ h3 {
     font-weight: 700;
     margin: 0;
     align-self: end;
+
+    transition: color .15s ease;
 }
 
 .project-description {
@@ -305,4 +347,12 @@ h3 {
     display: block;
     align-self: start;
     margin: 0;
+}
+
+#LiteRoom:hover {
+    color: var(--lite-active);
+}
+
+#Unpacker-Spotify:hover {
+    color: var(--unpacker--active);
 }
