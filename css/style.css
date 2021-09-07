@@ -11,7 +11,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding: 40px 0;
+    scroll-padding: 50px 0;
 }
 
 * {
@@ -27,8 +27,18 @@ body {
     color: var(--black);
 }
 
-section {
-    margin-bottom: 90px;
+
+section:nth-of-type(n + 2) {
+    margin-top: 90px;
+    margin-left: calc(10px + 6vw);
+    min-height: 90vh;
+    background-color: var(--white);
+}
+
+.center-x {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Navigation Bar ---------------------------------------- */
@@ -165,7 +175,7 @@ nav a {
 }
 
 .about-image-container {
-    height: 85%;
+    max-width: 40vw;
     border-radius: 0 50px;
     justify-self: center;
     align-self: center;
@@ -174,7 +184,7 @@ nav a {
 
 #about-image {
     display: block;
-    height: 100%;
+    width: 100%;
 }
 
 #about-image img {
@@ -184,7 +194,6 @@ nav a {
 .about-text-container {
     align-self: center;
     min-width: 400px;
-    margin-left: calc(10px + 6vw);
 }
 
 /* Header */
@@ -237,4 +246,63 @@ h2 {
 
 .skill-time {
     font-weight: 300;
+}
+
+/* Projects ---------------------------------------- */
+
+#projects > h1 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-areas: 
+        "icon title"
+        "icon description";
+    gap: 0px 20px;
+    height: 97px;
+    grid-template-columns: 95px 1fr;
+    margin-left: 20px;
+}
+
+.project-icon {
+    grid-area: icon;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-icon > svg {
+    height: 100%;
+}
+
+.project-title {
+    grid-area: title;
+    display: block;
+    font-family: 'Spartan', sans-serif;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    margin: 0;
+    align-self: end;
+}
+
+.project-description {
+    grid-area: description;
+    display: block;
+    align-self: start;
+    margin: 0;
 }
