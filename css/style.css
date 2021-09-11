@@ -151,7 +151,6 @@ nav a:hover::after {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 500px;
 }
 
 .home-content-container {
@@ -162,7 +161,6 @@ nav a:hover::after {
 /* Home Image */
 
 .home-image-container {
-    min-height: 400px;
     max-height: 100vh;
     overflow: hidden;
 }
@@ -313,6 +311,8 @@ h3 {
     background-color: var(--white);
     box-shadow: 0 0 0 rgba(0,0,0,0);
     transition: box-shadow .2s ease;
+
+    cursor: pointer;
 }
 
 .project-container:hover {
@@ -321,12 +321,12 @@ h3 {
 
 .project-icon {
     grid-area: icon;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .project-icon > svg {
-    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .project-title {
@@ -339,7 +339,11 @@ h3 {
     margin: 0;
     align-self: end;
 
-    transition: color .15s ease;
+    transition: color .15s ease, letter-spacing .15s cubic-bezier(.17,.67,.59,1.62) ;
+}
+
+.project-container:hover > .project-title {
+    letter-spacing: .5px;
 }
 
 .project-description {
@@ -355,4 +359,85 @@ h3 {
 
 #Unpacker-Spotify:hover {
     color: var(--unpacker--active);
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #about-image {
+        display: none;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+
+    section:nth-of-type(n + 2) {
+        margin-top: 40px;
+        margin-left: 0;
+        padding: 0 calc(10px + 6vw);
+    }
+
+    /* Add Mobile nav-var */
+    nav {
+        display: none;
+        /* bottom: 0; */
+    }
+
+    /* Home */
+
+    .greeting {
+        font-size: 1.5rem;
+    }
+    
+    .name {
+        font-size: 3rem;
+    }
+
+    /* About */
+
+    h1 {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: .9rem;
+        line-height: 1.6rem;
+    }
+
+    .about-text-container {
+        min-width: 0px;
+    }
+    
+    .about-header {
+        margin-bottom: 30px;
+    }
+
+    /* Projects */
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-container {
+        grid-template-areas: 
+            "icon"
+            "title"
+            "description";
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        text-align: center;
+    }
+
+    .project-container:hover > .project-title {
+        letter-spacing: -1px;
+    }
+    
 }
