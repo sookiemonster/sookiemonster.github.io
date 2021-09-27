@@ -126,6 +126,10 @@ nav a:hover::after {
     z-index: 2;
 }
 
+.social-link {
+    display: block;
+}
+
 .social-button {
     width: 60px;
     height: 60px;
