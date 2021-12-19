@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    // Recolor navbar when scrolled
+
     var nav = $('nav');
     var scrollY;
     $(window).scroll(function() {
@@ -8,5 +10,5 @@ $(document).ready(function() {
         } else if (scrollY <= 0) {
             nav.removeClass('scrolled');
         }
-    }).scroll();
+    }).scroll();    
 });
