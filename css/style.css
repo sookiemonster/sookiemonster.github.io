@@ -6,6 +6,8 @@
     --light-gray: #d8d8d8;
     --white: #ffffff;
 
+    --transparent-white: rgba(255,255,255,0.1);
+
     /* Project Hovers */
     --lite-active: #2c73c5;
     --unpacker--active: #059400;
@@ -111,18 +113,13 @@ nav a:hover::after {
 /* Social Media Sidebar ---------------------------------------- */
 
 .social-container {
-    position: fixed;
-    top: 50vh;
-    right: 0;
-    transform: translate3D(0, -50%, 0);
+    position: absolute;
+    left: 7%;
+    bottom: 40px;
     
     display: flex; 
-    flex-direction: column;
-    border-radius: 15px 0 0 15px;
-    padding: 15px 6px 10px 10px;
-    gap: 5px;
-    background-color: var(--white);
-    filter: drop-shadow(0 0 2px rgba(0,0,0,.3));
+    border-radius: 15px;
+    gap: 10px;
     z-index: 2;
 }
 
@@ -131,21 +128,17 @@ nav a:hover::after {
 }
 
 .social-button {
-    width: 60px;
-    height: 60px;
     padding: 7px;
-    background-color: inherit;
     border-radius: 10px;
-    background-color: inherit;
     transition: background-color .15s ease;
 }
 
 .social-button svg, .social-button img{
-    height: 100%;
+    height: calc(30px + 1.5vw);
 }
 
 .social-button:hover {
-    background-color: var(--light-gray);
+    background-color: var(--transparent-white);
 }
 
 /* Home ---------------------------------------- */
